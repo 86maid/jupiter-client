@@ -1,6 +1,6 @@
 [package]
 name = "jupiter-client"
-version = "1.0.0"
+version = "1.0.1"
 edition = "2024"
 description = "A type-safe, asynchronous Rust client for the Jupiter Aggregator API on Solana. Facilitates seamless token swaps, route finding, and quote generation."
 license = "MIT"
