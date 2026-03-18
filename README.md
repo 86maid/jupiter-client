@@ -11,7 +11,7 @@ Add the dependency to your `Cargo.toml`:
 
 ```toml
 [dependencies]
-jupiter-client = "1.0.0"
+jupiter-client = "1.0.1"
 ```
 
 Or use `cargo add`:
