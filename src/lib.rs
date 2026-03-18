@@ -896,3 +896,30 @@ impl JupiterClient {
             .map(Into::into)
     }
 }
+
+#[cfg(test)]
+mod tests {
+    use super::solana_sdk::pubkey;
+    use super::*;
+
+    #[tokio::test]
+    async fn test_swap() {
+        let client = JupiterClient::new_with_apikey(
+            "https://api.jup.ag/swap/v1",
+            "6fec26c0-9178-4d63-abe2-e29f8a10107f",
+        )
+        .unwrap();
+
+        let quote = client
+            .quote(&QuoteRequest {
+                input_mint: pubkey!("So11111111111111111111111111111111111111112"),
+                output_mint: pubkey!("EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v"),
+                amount: 1_000_000_000,
+                ..Default::default()
+            })
+            .await
+            .unwrap();
+
+        println!("{:?}", quote);
+    }
+}
