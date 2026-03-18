@@ -306,17 +306,16 @@ pub struct SwapInfo {
     pub in_amount: u64,
     #[serde(with = "field_as_string")]
     pub out_amount: u64,
-
-    // #[serde(default, with = "field_as_string")]
-    // pub fee_amount: u64,
-    // #[serde(default, with = "field_as_string")]
-    // pub fee_mint: Pubkey,
-
-    // 他妈的，有些 dex 没有 fee_amount fee_mint
     #[serde(default, with = "option_field_as_string")]
     pub fee_amount: Option<u64>,
     #[serde(default, with = "option_field_as_string")]
     pub fee_mint: Option<Pubkey>,
+    // deprecated
+    //
+    // #[serde(default, with = "field_as_string")]
+    // pub fee_amount: u64,
+    // #[serde(default, with = "field_as_string")]
+    // pub fee_mint: Pubkey,
 }
 
 pub type RoutePlanWithMetadata = Vec<RoutePlanStep>;

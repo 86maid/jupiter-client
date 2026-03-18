@@ -1,7 +1,12 @@
 [package]
 name = "jupiter-client"
-version = "0.1.0"
+version = "1.0.0"
 edition = "2024"
+description = "A type-safe, asynchronous Rust client for the Jupiter Aggregator API on Solana. Facilitates seamless token swaps, route finding, and quote generation."
+license = "MIT"
+repository = "https://github.com/86maid/jupiter-client"                                                                                                                # 推荐填写仓库地址
+keywords = ["solana", "jupiter", "dex", "crypto", "swap"]                                                                                                              # 添加关键词有助于搜索
+categories = ["cryptography::cryptocurrencies", "api-bindings", "asynchronous"]
 
 [dependencies]
 rust_decimal = "1"
