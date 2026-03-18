@@ -920,6 +920,6 @@ mod tests {
             .await
             .unwrap();
 
-        println!("{:?}", quote);
+        println!("{:#?}", quote);
     }
 }
